@@ -18,10 +18,7 @@ def permutation(lst):
     # one permutation is possible
     if len(lst) == 1:
         return [lst]
- 
-    # Find the permutations for lst if there are
-    # more than 1 characters
- 
+
     ls = [] # empty list that will store current permutation
  
     for i in lst:
@@ -43,6 +40,7 @@ def process_perms(perms):
             ok_perms.append(perm)        
     return ok_perms
 
+# multipy exchange rates to calculate total rate from first trade to last
 def calculate_exchange(trades, exchange_rate):
     trades_with_rate = []
     for trade in trades:
