@@ -17,11 +17,11 @@ contents = f.readlines()
 for line in contents:
     splitline = line.split(" ")
     if "BUY" in splitline:
-        count_buy += 1
-        total_buy = total_buy + int(splitline[-1])
+        count_buy += int(splitline[0])
+        total_buy = total_buy + (int(splitline[-1])*int(splitline[0]))
     elif "SELL" in splitline:
-        count_sell += 1
-        total_sell =  total_sell + int(splitline[-1])
+        count_sell += int(splitline[0])
+        total_sell =  total_sell + int(int(splitline[-1])*int(splitline[0]))
 
 print("no Sell:" + str(count_sell))
 print("no Buy:" + str(count_buy))
